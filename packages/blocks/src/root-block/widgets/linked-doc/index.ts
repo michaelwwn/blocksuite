@@ -90,7 +90,7 @@ export class AffineLinkedDocWidget extends WidgetElement {
      * The first item of the trigger keys will be the primary key
      */
     triggerKeys: ['@', '[[', '【【'],
-    ignoreBlockTypes: ['affine:code'],
+    ignoreBlockTypes: ['affine:code', 'affine:snippet'],
     /**
      * Convert trigger key to primary key (the first item of the trigger keys)
      */

@@ -42,7 +42,8 @@ export function tryConvertBlock(
   const isHeading = isParagraph && model.type.startsWith('h');
   const isParagraphQuoteBlock = isParagraph && isEqual(model.type, 'quote');
   const isCodeBlock = matchFlavours(model, ['affine:code']);
-  if (isHeading || isParagraphQuoteBlock || isCodeBlock) {
+  const isSnippetBlock = matchFlavours(model, ['affine:snippet']);
+  if (isHeading || isParagraphQuoteBlock || isCodeBlock || isSnippetBlock) {
     return KEYBOARD_ALLOW_DEFAULT;
   }
 

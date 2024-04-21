@@ -25,6 +25,7 @@ import { ParagraphBlockSchema } from './paragraph-block/paragraph-model.js';
 import { RootBlockSchema } from './root-block/root-model.js';
 import { SurfaceBlockSchema } from './surface-block/surface-model.js';
 import { SurfaceRefBlockSchema } from './surface-ref-block/surface-ref-model.js';
+import { SnippetBlockSchema } from './snippet-block/snippet-model.js';
 
 /** Built-in first party block models built for affine */
 export const AffineSchemas: z.infer<typeof BlockSchema>[] = [
@@ -42,6 +43,7 @@ export const AffineSchemas: z.infer<typeof BlockSchema>[] = [
   SurfaceRefBlockSchema,
   DataViewBlockSchema,
   AttachmentBlockSchema,
+  SnippetBlockSchema,
   EmbedYoutubeBlockSpec.schema,
   EmbedFigmaBlockSpec.schema,
   EmbedGithubBlockSpec.schema,

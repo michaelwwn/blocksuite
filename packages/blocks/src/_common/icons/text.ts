@@ -171,6 +171,24 @@ export const CodeBlockIcon = html`<svg
   />
 </svg>`;
 
+export const SnippetBlockIcon = html`<svg
+  width="20"
+  height="20"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    fill="currentColor"
+    d="M2.25 6C2.25 4.48122 3.48122 3.25 5 3.25H19C20.5188 3.25 21.75 4.48122 21.75 6V18C21.75 19.5188 20.5188 20.75 19 20.75H5C3.48122 20.75 2.25 19.5188 2.25 18V6ZM5 4.75C4.30964 4.75 3.75 5.30964 3.75 6V18C3.75 18.6904 4.30964 19.25 5 19.25H19C19.6904 19.25 20.25 18.6904 20.25 18V6C20.25 5.30964 19.6904 4.75 19 4.75H5Z"
+  />
+  <path
+    fill="currentColor"
+    d="M10 9L15 12L10 15V9Z"
+  />
+</svg>`;
+
 export const QuoteIcon = html`<svg
   width="20"
   height="20"
@@ -611,6 +629,35 @@ export const WrapIcon = html`<svg
     d="M11.046 5C11.046 4.58579 11.3818 4.25 11.796 4.25H14.6776C18.0311 4.25 20.7497 6.96849 20.7498 10.322C20.7499 13.6757 18.0313 16.3944 14.6776 16.3944H5.78857L8.81522 19.4743C9.10555 19.7697 9.10141 20.2446 8.80598 20.5349C8.51054 20.8253 8.03569 20.8211 7.74536 20.5257L3.46507 16.1701C3.17831 15.8783 3.17831 15.4105 3.46507 15.1187L7.74536 10.7632C8.03569 10.4677 8.51054 10.4636 8.80598 10.7539C9.10141 11.0443 9.10555 11.5191 8.81522 11.8146L5.78857 14.8944H14.6776C17.2028 14.8944 19.2499 12.8473 19.2498 10.3221C19.2497 7.79695 17.2027 5.75 14.6776 5.75H11.796C11.3818 5.75 11.046 5.41421 11.046 5Z"
   />
 </svg>`;
+
+export const RunIcon = html`<svg
+width="20"
+height="20"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path    
+fill-rule="evenodd"
+clip-rule="evenodd"
+fill="currentColor"
+d="M8 5l11 7-11 7V5z" 
+/>
+</svg>`;
+
+export const StopIcon = html`<svg
+width="20"
+height="20"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"
+>
+<rect 
+fill-rule="evenodd"
+clip-rule="evenodd" 
+fill="currentColor"
+x="5" y="5" width="14" height="14" rx="2" ry="2"/>
+</svg>
+`;
+
 
 export const CancelWrapIcon = html`<svg
   width="20"

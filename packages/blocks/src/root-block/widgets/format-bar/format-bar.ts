@@ -106,6 +106,7 @@ export class AffineFormatBarWidget extends WidgetElement {
           'affine:paragraph',
           'affine:list',
           'affine:code',
+          'affine:snippet',
           'affine:image',
         ])
       ) {

@@ -322,7 +322,7 @@ export const bindContainerHotkey = (blockElement: BlockElement) => {
       }
 
       // Auto delete bracket right
-      if (matchFlavours(blockElement.model, ['affine:code'])) {
+      if (matchFlavours(blockElement.model, ['affine:code', 'affine:snippet'])) {
         const inlineRange = inlineEditor.getInlineRange();
         assertExists(inlineRange);
         const left = inlineEditor.yText.toString()[inlineRange.index - 1];

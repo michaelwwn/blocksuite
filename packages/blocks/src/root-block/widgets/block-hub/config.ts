@@ -13,6 +13,7 @@ import {
   ImageIcon,
   NumberedListIcon,
   QuoteIcon,
+  SnippetBlockIcon,
   TextIcon,
 } from '../../../_common/icons/index.js';
 
@@ -94,6 +95,14 @@ export const BLOCKHUB_TEXT_ITEMS: BlockHubItem[] = [
     description: 'Capture a code snippet.',
     icon: CodeBlockIcon,
     tooltip: 'Drag/Click to insert Code Block',
+  },
+  {
+    flavour: 'affine:snippet',
+    type: 'snippet',
+    name: 'Snippet Block',
+    description: 'Capture a runnable code snippet.',
+    icon: SnippetBlockIcon,
+    tooltip: 'Drag/Click to insert Snippet Block',
   },
   {
     flavour: 'affine:paragraph',

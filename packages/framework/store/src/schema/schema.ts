@@ -101,7 +101,7 @@ export class Schema {
     if (!relationCheckSuccess) {
       throw new SchemaValidateError(
         child.model.flavour,
-        `Block cannot have parent: ${parent.model.flavour}.`
+        `Block cannot have parent: ${parent.model.flavour}, it is now using ${child.model.parent}`
       );
     }
   }
@@ -230,7 +230,7 @@ export class Schema {
 
     const childValidFlavours = child.model.parent || ['*'];
     const parentValidFlavours = parent.model.children || ['*'];
-
+    
     return parentValidFlavours.some(parentValidFlavour => {
       return childValidFlavours.some(childValidFlavour => {
         if (parentValidFlavour === '*' && childValidFlavour === '*') {

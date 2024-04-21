@@ -134,7 +134,7 @@ export class AffineSlashMenuWidget extends WidgetElement {
       return;
     }
 
-    if (matchFlavours(model, ['affine:code'])) return;
+    if (matchFlavours(model, ['affine:code', 'affine:snippet'])) return;
     const inlineEditor = getInlineEditorByModel(this.host, model);
     if (!inlineEditor) return;
     inlineEditor.slots.inlineRangeApply.once(() => {

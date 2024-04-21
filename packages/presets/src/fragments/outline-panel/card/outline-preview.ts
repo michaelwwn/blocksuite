@@ -8,6 +8,7 @@ import type {
   ImageBlockModel,
   ListBlockModel,
   ParagraphBlockModel,
+  SnippetBlockModel,
 } from '@blocksuite/blocks';
 import { BlocksUtils } from '@blocksuite/blocks';
 import { DisposableGroup, noop } from '@blocksuite/global/utils';
@@ -264,6 +265,16 @@ export class OutlineBlockPreview extends WithDisposable(LitElement) {
             ? html`<span class=${iconClass}
                 >${previewIconMap['bookmark']}</span
               >`
+            : nothing}
+        `;
+      case 'affine:snippet':
+        assertType<SnippetBlockModel>(block);
+        return html`
+          <span class="text general"
+            >${block.language ?? placeholderMap['code']}</span
+          >
+          ${this.showPreviewIcon
+            ? html`<span class=${iconClass}>${previewIconMap['code']}</span>`
             : nothing}
         `;
       case 'affine:code':

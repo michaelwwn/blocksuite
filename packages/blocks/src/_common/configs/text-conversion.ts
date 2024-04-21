@@ -14,6 +14,7 @@ import {
   NumberedListIcon,
   QuoteIcon,
   TextIcon,
+  SnippetBlockIcon
 } from '../icons/index.js';
 
 /**
@@ -105,6 +106,13 @@ export const textConversionConfigs: TextConversionConfig[] = [
     name: 'Code Block',
     hotkey: [`Mod-Alt-c`],
     icon: CodeBlockIcon,
+  },
+  {
+    flavour: 'affine:snippet',
+    type: undefined,
+    name: 'Snippet Block',
+    hotkey: null,
+    icon: SnippetBlockIcon,
   },
   {
     flavour: 'affine:paragraph',

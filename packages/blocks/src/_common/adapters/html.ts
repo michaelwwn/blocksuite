@@ -353,7 +353,8 @@ export class HtmlAdapter extends BaseAdapter<Html> {
             .closeNode();
           break;
         }
-        case 'affine:code': {
+        case 'affine:code':
+        case 'affine:snippet': {
           context
             .openNode(
               {

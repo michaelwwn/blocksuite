@@ -35,6 +35,7 @@ import {
   SurfaceRefBlockSchema,
   SurfaceRefBlockService,
 } from '../surface-ref-block/index.js';
+import { SnippetBlockSchema } from '../snippet-block/snippet-model.js';
 
 const PreviewPageSpec: BlockSpec = {
   schema: RootBlockSchema,
@@ -83,6 +84,12 @@ const CommonFirstPartyBlockSpecs: BlockSpec[] = [
     view: {
       component: literal`affine-code`,
     },
+  },
+  {
+    schema: SnippetBlockSchema,
+    view: {
+      component: literal`affine-snippet`,
+    }
   },
   {
     schema: ImageBlockSchema,

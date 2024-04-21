@@ -89,7 +89,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
               }
 
               // Reset selection if the target is code block
-              if (flavour === 'affine:code') {
+              if (flavour === 'affine:code' || flavour === 'affine:snippet') {
                 if (newModels.length !== 1) {
                   console.error(
                     "Failed to reset selection! New model length isn't 1"

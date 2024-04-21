@@ -153,6 +153,7 @@ export type NoteChildrenFlavour =
   | 'affine:paragraph'
   | 'affine:list'
   | 'affine:code'
+  | 'affine:snippet'
   | 'affine:divider'
   | 'affine:database'
   | 'affine:data-view'

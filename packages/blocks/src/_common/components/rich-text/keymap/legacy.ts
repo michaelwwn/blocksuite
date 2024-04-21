@@ -96,7 +96,7 @@ export function hardEnter(
   const isEnd = model.text.length === range.index;
   const softEnterable = isSoftEnterable(model);
   if (isEnd && softEnterable) {
-    if (matchFlavours(model, ['affine:code'])) {
+    if (matchFlavours(model, ['affine:code', 'affine:snippet'])) {
       if (shortKey) {
         // shortKey+Enter to exit the block
         handleBlockEndEnter(editorHost, model);
@@ -152,7 +152,7 @@ export function hardEnter(
 // 2. In the middle and start of block, press Enter will insert a \n to break the line
 // TODO this should be configurable per-block
 function isSoftEnterable(model: BlockModel) {
-  if (matchFlavours(model, ['affine:code'])) return true;
+  if (matchFlavours(model, ['affine:code', 'affine:snippet'])) return true;
   if (matchFlavours(model, ['affine:paragraph'])) {
     return model.type === 'quote';
   }
@@ -166,7 +166,7 @@ export function onBackspace(
   inlineEditor: AffineInlineEditor
 ) {
   if (isCollapsedAtBlockStart(inlineEditor)) {
-    if (model.flavour === 'affine:code') {
+    if (model.flavour === 'affine:code' || model.flavour === 'affine:snippet') {
       return KEYBOARD_ALLOW_DEFAULT;
     }
     e.stopPropagation();

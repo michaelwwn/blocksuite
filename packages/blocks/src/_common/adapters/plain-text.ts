@@ -246,6 +246,7 @@ export class PlainTextAdapter extends BaseAdapter<PlainText> {
         delta: DeltaInsert[];
       };
       switch (o.node.flavour) {
+        case 'affine:snippet':
         case 'affine:code': {
           buffer += text.delta.map(delta => delta.insert).join('');
           buffer += '\n';

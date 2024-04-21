@@ -23,6 +23,7 @@ import {
   LinkIcon,
   NumberedListIcon,
   QuoteIcon,
+  SnippetBlockIcon,
   StrikethroughIcon,
   TextIcon,
   UnderlineIcon,
@@ -267,6 +268,11 @@ export function toolbarDefaultConfig(toolbar: AffineFormatBarWidget) {
       flavour: 'affine:code',
       name: 'Code Block',
       icon: CodeIcon,
+    })
+    .addBlockTypeSwitch({
+      flavour: 'affine:snippet',
+      name: 'Snippet Block',
+      icon: SnippetBlockIcon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
